@@ -1,0 +1,58 @@
+<html lang="en"
+<head>
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    h1,h2 {text-align:center;}
+    section.labelWidth label {display: inline-block; width: 60%; text-align: right;}
+    section label.left{display:inline-block; width 60%; text-align:right;}
+    input.submit{display:block; margin-left:auto; margin-right:auto;}
+  </style>
+  </head>
+  <body style="background-color:pink;">
+    <main>
+      <header>
+        <h1>SweetT's Reviews</h1>
+      <nav>
+        <hr>
+        <a href="SweetT 1.html"> Home</a>
+        <a href="Menu.html">Menu</a>
+        <a href="Contact Us.html">Contact Us</a>
+        </nav>
+      </header>
+      <hr>
+      <form action="submit.html" method="post">
+        <form action="submit.html" method="POST">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name"><br/><br/>
+			<label for="email">Email:</label>
+			<input type="text" id="email" name="email"><br/><br/>
+			<label for="phone">Phone:</label>
+			<input type="text" id="phone" name="phone"><br/><br/>
+			<label for="inquiry">Reasons for Contact:</label>
+				       <select id="inquiry" name="inquiry">
+					<option value="default" selected>Catering</option>
+					<option value="privateParty">Reservations</option>
+					<option value="feedback">Feeback</option>
+					<option value="Other">Other</option>
+				       </select><br/><br/>
+			<label for="info">Additional Information:</label>
+				<textarea id="info" name="info"></textarea>	<br/><br/>
+				Would you like to recieve a call back?
+				<input type="radio" id="choice2" name="questionaire" calue="no">
+				<label for="choice2">No</label>
+				<input type="radio" id="choice1" name="questionaire" value="yes">
+				<label for="choice1">Yes</label><br/><br/>
+				Best days to contact you:
+				<input type="checkbox" id="Mon" name="Monday" value="Monday">
+				<label for="Mon">M</label>
+				<input type="checkbox" id="Tue" name="Tuesday" value="Tuesday">
+				<label for="mon">T</label>
+				<input type="checkbox" id="Wed" name="Wednesday" value="Wednesday">
+				<label for="wed">W</label>
+				<input type="checkbox" id="Thur" name="Thursday" value="Thursday">
+				<label for="thur">Th</label>
+				<input type="checkbox" id="Fri" name="Friday" value="Friday">
+				<label for="fri">F</label><br/><br>
+				<input type="submit" name="sendRequest" value="Send Request">
+			</form>

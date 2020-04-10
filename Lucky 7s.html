@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lucky 7's</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    body {
+      font-family: 'El Messiri', sans-serif;
+      background-color: #060505;
+      color: mintCream;
+      text-align: center;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+
+    </style>
+</head>
+<body>
+<h1>Lucky 7's</h1>
+<img src= "Images/dice.jpg" width="300px" height="300px">
+<br>
+Starting bet: <input id="firstNumber" type="number"><br><br>
+<button id="calculate" onClick="hatsOff()">Play</button>
+<hr>
+<table style="width:100%">
+  <tr>
+    <td>Your Starting Bet</td>
+    <td><p id="startingBet"></p></td>
+  </tr>
+  <tr>
+    <td>Total Number of Rolls</td>
+    <td><p id="totalRoll"></p></td>
+  </tr>
+  <tr>
+    <td><font color= red>Highest Amount Won</font></td>
+    <td><font color= green><p id="highestWon"></p></font></td>
+  </tr>
+  <tr>
+    <td>Roll Count before Highest Amount</td>
+    <td><p id="rollCountHighestWon"></p></td>
+  </tr>
+</table>
+</body>
+</html>
+<script type="text/javascript">
+  function hatsOff(){
+    let firstNum = parseInt(document.getElementById("firstNumber").value);
+
+document.getElementById("startingBet").innerHTML = firstNum;
+  if(firstNum < 0 ){
+    alert("You're betting less than a dollar?? Please try again.");
+    return;
+  }
+let money = firstNum;
+let totalRoll = 0;
+let highestWon = 0;
+let rollCountHighestWon = 0;
+while(money >0) {
+  let dice1 = rollDice();
+  let dice2 = rollDice();
+  if ((dice1+dice2) ===7){
+    money = money+4;
+  }else {
+    money = money-1;
+  }
+if (highestWon < money ){
+  highestWon = money;
+  rollCountHighestWon = totalRoll +1;
+}
+  totalRoll++;
+}
+document.getElementById("totalRoll").innerHTML = totalRoll;
+document.getElementById("highestWon").innerHTML = "$"+highestWon;
+document.getElementById("rollCountHighestWon").innerHTML = rollCountHighestWon;
+ }
+ function rollDice(){
+   return Math.floor(Math.random() * Math.floor(6))+1;
+ }
+</script>

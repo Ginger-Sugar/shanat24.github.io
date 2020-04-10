@@ -3,33 +3,78 @@
   <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
   <style>
+
+
     h1,h2 {text-align:center;}
     section.labelWidth label {display: inline-block; width: 60%; text-align: right;}
     section label.left{display:inline-block; width 60%; text-align:right;}
     input.submit{display:block; margin-left:auto; margin-right:auto;}
     @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css");
+
+
     body{
       font-family: 'Gotu', sans-serif;
-      background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-031.jpg");
-}
+      background-color: #B5DDD1;
+      text-align:center;
+      }
+
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+        width: 250px;
+        height: 200px;
+        padding-bottom: 20px;
+      }
+
+      nav {
+        background-color: #C3E4FD;
+        color: #f0f2f5;
+        padding: 8px;
+        border: thin solid #0d1f2d;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        margin: 20px;
+      }
+
+      a {
+        text-decoration: underline;
+        color: #FA6E4F;
+      }
+
+      nav .btn {
+        background-color: #FA6E4F;
+        color: #8EC9BB;
+        text-align: center;
+      }
   </style>
   </head>
-  <body style="background-color:pink;">
+  <body style="background-color:#B5DDD1;">
+
+    <header>
+      <img src="Images/Logo 4.png">
+      <h1>
+        <font size="40" color=#E08963><strong>SweetT's Reviews</strong></font>
+      </h1>
+    </header>
+    <hr>
+
+    <nav style="text-align:center">
+      <a class="btn" href="SweetT 1.html"> Home </a>
+      <a class="btn" href="Menu.html"> Menu </a>
+      <a class="btn" href="Contact Us.html"> Contact Us </a>
+    </nav>
     <main>
-      <header>
-        <h1>SweetT's Reviews</h1>
-      <nav>
-        <hr>
-        <a href="SweetT 1.html"> Home</a>
-        <a href="Menu.html">Menu</a>
-        <a href="Contact Us.html">Contact Us</a>
-        </nav>
-      </header>
-      <hr>
-      <form action="submit.html" method="post">
-        <form action="submit.html" method="POST">
+    </hr>
+
+
+
+      <form>
 			<label for="name">Name:</label>
 			<input type="text" id="name" name="name"><br/><br/>
+      <div id="noName" style="display:none;">Please enter your full name</div>
 			<label for="email">Email:</label>
 			<input type="text" id="email" name="email"><br/><br/>
 			<label for="phone">Phone:</label>
@@ -59,5 +104,23 @@
 				<label for="thur">Th</label>
 				<input type="checkbox" id="Fri" name="Friday" value="Friday">
 				<label for="fri">F</label><br/><br>
-				<input type="submit" name="sendRequest" value="Send Request">
+        <center>
+          <button id="submitButton" onclick="return errorMessage();">Submit</button>
+          <button id="reset" onclick="location.reload();">Reset Form</button>
+        </center>
+
+
+
 			</form>
+      <br><br>
+      <footer>
+          Address: 5545 7th Ave. Flushing, NY <br>
+          Contact Us: 347-555-5555
+        </footer>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <script src="Contact Us.js"></script>
+      <noscript>You would have a better viewing experience using JavaScript</noscript>
+    </body>
+    </html>

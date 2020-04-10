@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    Display Evens: Tech Hire Assignment
+  </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Kalam', cursive;
+      background-color: black;
+      color: #FCFFFD;
+      text-align: center;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    #button1 {
+      background-color: darkSlateGray;
+      border: 1px;
+      color: red;
+      padding: 10px 10px;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+  </style>
+
+</head>
+
+<body>
+
+  <div>
+    <h1>
+      <font color=red>Display Evens: Tech Hire Assignment</font>
+    </h1>
+    <form name="displayEvensForm" class="needs-validation" onsubmit="return validate();" onreset="resetView();" novalidate>
+      <div>
+
+        First Number <input id="First Number: Lower" type="number" required>
+        <div id="firstError" style="display:none;">
+          First Number is required and must be a positive number.
+        </div>
+        <br>
+        <br>
+        Second Number <input id="Second Number: Higher" type="number" required>
+
+        <div id="secondError" style="display:none;">
+          Second Number is required and must be a positive number.
+        </div>
+        <br>
+        <br>
+        Step <input id="Step" type="number" required>
+
+        <div id="stepError" style="display:none;">
+          You must enter a step amount.
+        </div>
+        <br><br>
+        <button type="button" onclick="displayEvens()" id="button1"> Display Evens</button>
+
+
+        <!-- <section id="evens" style="display: none;">
+                          <span id = printStrtNum></span> and
+                           <span id = printEndNum></span> by
+                           <span id = printStep></span>'s: -->
+          <p id="showResult"></p>
+          <p id="answers"></p>
+        <!-- </section> -->
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+        <script src="displayEvens.js"></script>
+</body>
+
+</html>
